@@ -1,0 +1,35 @@
+@media screen and (max-width: 965px){
+  .contacts {
+    margin-left: 5%;
+    margin-bottom: 140px;
+  }
+  .contacts__caption,
+  .contacts__text {
+    width: 240px;
+  }
+  .adress-box {
+    margin-left: 5%;
+  }
+  .adress__caption,
+  .adress__text,
+  .adress__definer {
+    width: 320px;
+  }
+  // .footer-contacts {
+  //   margin-left: 30px;
+  // }
+  // .footer-copyright {
+  //   margin-right: 30px;
+  // }
+}
+@media screen and (max-width: 550px){
+  // .footer-contacts {
+  //   margin-left: 30px;
+  //   width: 100%;
+  // }
+  // .footer-copyright {
+  //   margin-left: 30px;
+  //   margin-bottom: 20px;
+  //   width: 100%;
+  // }
+}

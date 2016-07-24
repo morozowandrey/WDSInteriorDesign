@@ -1,0 +1,27 @@
+.banner {
+
+  &__caption {
+    color: $black;
+    font-size: 44px;
+    text-align: center;
+    line-height: 1em;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      margin-top: 40px;
+      background: $gray;
+      width: 150px;
+      position: relative;
+      left: 404px;
+    }
+  }
+
+  &__text {
+    color: $gray;
+    font-size: 14px;
+    text-align: center;
+    margin: 40px 0 65px;
+  }
+}

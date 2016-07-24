@@ -1,0 +1,25 @@
+.adress-box {
+  position: relative;
+  bottom: 43px;
+  display: inline-block;
+  width: 48%;
+
+  .adress__caption {
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 20px;
+  }
+  .adress__text {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 20px;
+  }
+  .adress__definer {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 25px;
+  }
+  .adress__map {
+
+  }
+}
