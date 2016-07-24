@@ -11,13 +11,13 @@ module.exports = function(grunt) {
                     'src/js/modules/*.js', // Все JS в папке libs
                     'src/js/global.js'  // Конкретный файл
                 ],
-                dest: 'js/build/production.js',
+                dest: 'build/production.js',
             }
         },
         uglify: {
             build: {
-                src: 'js/build/production.js',
-                dest: 'js/build/production.min.js'
+                src: 'build/production.js',
+                dest: 'build/production.min.js'
             }
         },
         imagemin: {
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'css/build/main.css': 'src/sass/main.scss'
+                    'build/main.css': 'src/sass/main.scss'
                 }
             }
         },
