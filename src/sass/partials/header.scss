@@ -3,29 +3,33 @@
   background-color: $black;
   margin-bottom: 60px;
 }
+.header-nav__item--margin {
+  margin-left: 25px;
+}
 .header-nav {
     margin: 0;
     padding: 0;
 
-    // display: flex;
-    // flex-flow: row wrap;
-    // justify-content: space-between;
-    // align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
   
   .header-nav__item {
-    display: inline-block;
-    width: 13.9%;
+    // display: inline-block;
+    // width: 13.9%;
     color: $gray;
     font-size: 16px;
     text-transform: uppercase;
     list-style-type: none;
-    text-align: center;
-    vertical-align: middle;
+    // text-align: center;
+    // vertical-align: middle;
   }
   .logo {
     font-size: 40px;
     color: $white;
     margin: 30px 0px;
+    font-weight: 800;
     // font-family: $secondary-ff;
   }
   .current {
