@@ -1,4 +1,6 @@
-function initialize() {
+$(document).on("ready",function(){
+
+$(function initialize() {
 	var latlng = new google.maps.LatLng(50.4501, 30.5234);
 	var settings = {
 		zoom: 15,
@@ -13,4 +15,6 @@ function initialize() {
 	google.maps.event.addListener(companyMarker, 'click', function() {
 	infowindow.open(map,companyMarker);
 	});
-}
+})
+
+})

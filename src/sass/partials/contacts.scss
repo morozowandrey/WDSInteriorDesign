@@ -37,11 +37,14 @@
     resize: vertical;
   }
 
+  .field__invalid {
+    border:1px solid red;
+  }
+
   .field-wrap {
     margin-bottom:10px;
   }
   .input-message__fild {
-    border:1px solid $light-gray;
     background: $light-gray;
     min-height: 200px;
     width: 460px;

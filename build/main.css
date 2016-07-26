@@ -518,11 +518,13 @@ textarea {
   border: 2px solid #edf1f2;
   resize: vertical;
 }
+.contacts .field__invalid {
+  border: 1px solid red;
+}
 .contacts .field-wrap {
   margin-bottom: 10px;
 }
 .contacts .input-message__fild {
-  border: 1px solid #edf1f2;
   background: #edf1f2;
   min-height: 200px;
   width: 460px;

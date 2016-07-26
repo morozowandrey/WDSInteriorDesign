@@ -11007,50 +11007,36 @@ if ( !noGlobal ) {
 return jQuery;
 }));
 
-// $('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-//   var $this = $(this),
-//       label = $this.prev('label');
+$(window).on('load',function(){
+	$(".contact-input__button ").on('click',function(e){
+		
+		var field = $(".field-wrap input,textarea");
 
-// 	  if (e.type === 'keyup') {
-// 			if ($this.val() === '') {
-//           label.removeClass('active highlight');
-//         } else {
-//           label.addClass('active highlight');
-//         }
-//     } else if (e.type === 'blur') {
-//     	if( $this.val() === '' ) {
-//     		label.removeClass('active highlight'); 
-// 			} else {
-// 		    label.removeClass('highlight');   
-// 			}   
-//     } else if (e.type === 'focus') {
-      
-//       if( $this.val() === '' ) {
-//     		label.removeClass('highlight'); 
-// 			} 
-//       else if( $this.val() !== '' ) {
-// 		    label.addClass('highlight');
-// 			}
-//     }
+		for (var i = 0; i < field.length; i++) {
+			if(field.eq(i).val()===""){
+				e.preventDefault();
 
-// });
+				// console.log(field.eq(i));
+				field.eq(i).addClass("field__invalid");
+				}
+			else if(field.eq(i).val()!==""){
+				field.eq(i).removeClass("field__invalid");
+				}
+			}	
+		})	
+	$(".field-wrap input,textarea").keyup(function(){
+		
+		var field = $(".field-wrap input,textarea");
+		for (var i = 0; i < field.length; i++) {
+			if(field.eq(i).val()!==""){
+				field.eq(i).removeClass("field__invalid");
+			}
+		}
+	})
+	})
+$(document).on("ready",function(){
 
-// $('.tab a').on('click', function (e) {
-  
-//   e.preventDefault();
-  
-//   $(this).parent().addClass('active');
-//   $(this).parent().siblings().removeClass('active');
-  
-//   target = $(this).attr('href');
-
-//   $('.tab-content > div').not(target).hide();
-  
-//   $(target).fadeIn(600);
-  
-// });
-function initialize() {
+$(function initialize() {
 	var latlng = new google.maps.LatLng(50.4501, 30.5234);
 	var settings = {
 		zoom: 15,
@@ -11065,4 +11051,6 @@ function initialize() {
 	google.maps.event.addListener(companyMarker, 'click', function() {
 	infowindow.open(map,companyMarker);
 	});
-}
+})
+
+})

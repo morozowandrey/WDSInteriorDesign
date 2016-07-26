@@ -1,43 +1,27 @@
-// $('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-//   var $this = $(this),
-//       label = $this.prev('label');
+$(window).on('load',function(){
+	$(".contact-input__button ").on('click',function(e){
+		
+		var field = $(".field-wrap input,textarea");
 
-// 	  if (e.type === 'keyup') {
-// 			if ($this.val() === '') {
-//           label.removeClass('active highlight');
-//         } else {
-//           label.addClass('active highlight');
-//         }
-//     } else if (e.type === 'blur') {
-//     	if( $this.val() === '' ) {
-//     		label.removeClass('active highlight'); 
-// 			} else {
-// 		    label.removeClass('highlight');   
-// 			}   
-//     } else if (e.type === 'focus') {
-      
-//       if( $this.val() === '' ) {
-//     		label.removeClass('highlight'); 
-// 			} 
-//       else if( $this.val() !== '' ) {
-// 		    label.addClass('highlight');
-// 			}
-//     }
+		for (var i = 0; i < field.length; i++) {
+			if(field.eq(i).val()===""){
+				e.preventDefault();
 
-// });
-
-// $('.tab a').on('click', function (e) {
-  
-//   e.preventDefault();
-  
-//   $(this).parent().addClass('active');
-//   $(this).parent().siblings().removeClass('active');
-  
-//   target = $(this).attr('href');
-
-//   $('.tab-content > div').not(target).hide();
-  
-//   $(target).fadeIn(600);
-  
-// });
+				// console.log(field.eq(i));
+				field.eq(i).addClass("field__invalid");
+				}
+			else if(field.eq(i).val()!==""){
+				field.eq(i).removeClass("field__invalid");
+				}
+			}	
+		})	
+	$(".field-wrap input,textarea").keyup(function(){
+		
+		var field = $(".field-wrap input,textarea");
+		for (var i = 0; i < field.length; i++) {
+			if(field.eq(i).val()!==""){
+				field.eq(i).removeClass("field__invalid");
+			}
+		}
+	})
+	})
